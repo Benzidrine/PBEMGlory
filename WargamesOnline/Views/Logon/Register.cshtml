@@ -1,0 +1,46 @@
+﻿@model LogonModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="POST" action="RegisterNewUser">
+    <div class="row">
+        <div class="col-12">
+            <h1>Register</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            Display Name:
+        </div>
+        <div class="col-12">
+            <input type="text" asp-for="DisplayName" required class="form-control" />
+        </div>
+        <div class="col-12">
+            User Name:
+        </div>
+        <div class="col-12">
+            <input type="text" asp-for="UserName" required class="form-control" />
+        </div>
+        <div class="col-12">
+            Password:
+        </div>
+        <div class="col-12">
+            <input type="text" asp-for="Password" required class="form-control" />
+        </div>
+        <div class="col-12">
+            Email Address:
+        </div>
+        <div class="col-12">
+            <input type="text" asp-for="EmailAddress" required class="form-control" />
+        </div>
+        <div class="col-12">
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </div>
+        <div class="col-12 alert-danger">
+            @ViewBag.Message
+        </div>
+    </div>
+</form>
